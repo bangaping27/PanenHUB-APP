@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+
+<html lang="id"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#2d5927",
+                        "earth": "#4B3621",
+                        "background-light": "#f6f7f6",
+                        "background-dark": "#161d15",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 antialiased">
+<div class="relative flex min-h-screen w-full flex-col max-w-md mx-auto bg-background-light dark:bg-background-dark shadow-xl">
+<!-- Header Section -->
+<header class="sticky top-0 z-10 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md px-4 pt-6 pb-4">
+<div class="flex items-center justify-between mb-4">
+<div class="flex items-center gap-3">
+<div class="size-12 rounded-full border-2 border-primary overflow-hidden">
+<img alt="Farmer Profile" data-alt="Portrait of a smiling Indonesian farmer" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCE5nUHWl9TEQb_P_qUEMIFDFRGPrOlRjIn5L1oHcUHoHt6bLVqs6bJOacLtJcjpBVpLuNE80ForX99_DFb2hPWXVhv7KL-Cn2sU8DTEMsvuGtJjfbv7f5GQtT74vUkS0fCKHmkKFw7H691nUarg5AVmCwDSCavBHXjKOrpur1AUNztsWFFQJtuHUHBnRGHzY63_o6sMv390CGxvFSmXL7KYduNqBGGQourP8LKs8FsMWKIcPuClr19ZHTBotMkmc7drKqKuS5fhwA"/>
+</div>
+<div>
+<h1 class="text-lg font-bold leading-tight">Halo, Apingbos</h1>
+<p class="text-xs text-primary font-medium">Petani Terverifikasi</p>
+</div>
+</div>
+<button class="relative p-2 rounded-full bg-white dark:bg-slate-800 shadow-sm border border-slate-200 dark:border-slate-700">
+<span class="material-symbols-outlined text-slate-600 dark:text-slate-300">notifications</span>
+<span class="absolute top-2 right-2 size-2 bg-red-500 rounded-full border-2 border-white dark:border-slate-800"></span>
+</button>
+</div>
+<!-- Verification Status Badge -->
+<div class="flex items-center justify-between bg-primary/10 dark:bg-primary/20 border border-primary/30 p-3 rounded-xl">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-xl">verified</span>
+<p class="text-sm font-bold text-primary">Status Verifikasi: Aktif</p>
+</div>
+<span class="text-[10px] uppercase tracking-wider font-bold text-primary/70">ID: PH-8829</span>
+</div>
+</header>
+<main class="flex-1 px-4 pb-24 space-y-6">
+<!-- Quick Actions / QR Validation -->
+<section>
+<button type="button" onclick="window.location.href='validasi_pengiriman.html'" class="w-full bg-primary hover:bg-primary/90 text-white flex items-center justify-center gap-3 py-4 rounded-2xl shadow-lg shadow-primary/20 transition-all active:scale-[0.98]">
+<span class="material-symbols-outlined text-2xl">qr_code_scanner</span>
+<span class="font-bold text-lg">Validasi Panen (Scan QR)</span>
+</button>
+</section>
+<!-- Wallet Style Card: Subsidy & Validation -->
+<section class="space-y-3">
+<h2 class="text-base font-bold flex items-center gap-2">
+<span class="material-symbols-outlined text-earth">inventory_2</span>
+                    Subsidi &amp; Kuota
+                </h2>
+<div class="bg-earth text-white p-5 rounded-2xl shadow-xl relative overflow-hidden">
+<!-- Decorative element -->
+<div class="absolute -right-6 -top-6 size-24 bg-white/10 rounded-full blur-2xl"></div>
+<div class="flex justify-between items-start mb-6">
+<div>
+<p class="text-white/70 text-xs font-medium mb-1">Sisa Kuota Pupuk Urea</p>
+<h3 class="text-3xl font-bold">125 <span class="text-sm font-normal">kg</span></h3>
+</div>
+<span class="material-symbols-outlined text-white/40 text-4xl">eco</span>
+</div>
+<div class="flex items-center gap-3 bg-white/10 p-3 rounded-lg border border-white/10">
+<span class="material-symbols-outlined text-white/80">calendar_today</span>
+<div>
+<p class="text-[10px] text-white/60 uppercase font-bold leading-none mb-1">Jadwal Pengambilan</p>
+<p class="text-sm font-semibold">Senin, 24 Mei • 08:00 - 12:00</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Supply-Demand Card List -->
+<section class="space-y-4">
+<div class="flex items-center justify-between">
+<h2 class="text-base font-bold flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">shopping_cart</span>
+                        Permintaan Pasokan
+                    </h2>
+<a class="text-xs font-bold text-primary underline" href="marketplace_history.html">Lihat Semua</a>
+</div>
+<!-- Demand Card 1 -->
+<div class="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-2xl p-4 shadow-sm">
+<div class="flex gap-4 mb-4">
+<div class="size-16 rounded-xl overflow-hidden shrink-0">
+<img alt="Red Chili" data-alt="Fresh red chili peppers in a basket" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDJgdPZOyWr8LpPRoqer2ptyFpPh_joTTmoOpfCMTXhQO65idGki3pZg9UKidmTNjfjlwEhgh21VXNum0XfIhCutjTihW6Ik6Hs9IHC6zSLKkfg9XjWOaSO5c_Hhs1InQX0r1QKytba-VGb_Eez4yNkRZNXkFTRh5fi3rr07tl25UWxQ6mZIKNXAPBXgNLRiuPR6tmMIFfpsCzPfkkmch43HMR7gr5lBF-Mb_qunpfF0msdQwTtPF_npOO4wyJQNZ_l7oEXnm6_EAM"/>
+</div>
+<div class="flex-1">
+<div class="flex justify-between items-start">
+<span class="bg-red-100 text-red-700 dark:bg-red-900/30 dark:text-red-400 text-[10px] font-bold px-2 py-0.5 rounded-full mb-1 inline-block">Mendesak</span>
+</div>
+<h3 class="font-bold text-slate-900 dark:text-white leading-tight">Butuh 500kg Cabai Merah</h3>
+<p class="text-xs text-slate-500 dark:text-slate-400 mt-1">Buyer: <span class="font-semibold text-slate-700 dark:text-slate-200">PT Sayur Segar</span></p>
+</div>
+</div>
+<!-- Claim Request Controls -->
+<div class="bg-slate-50 dark:bg-slate-900/50 p-3 rounded-xl border border-slate-100 dark:border-slate-700">
+<div class="flex justify-between items-center mb-2">
+<p class="text-[11px] font-bold text-slate-500 uppercase">Input Kapasitas Anda</p>
+<p class="text-xs font-bold text-primary">150 / 500 kg</p>
+</div>
+<!-- Custom capacity slider visual -->
+<div class="h-2 bg-slate-200 dark:bg-slate-700 rounded-full mb-4 overflow-hidden">
+<div class="h-full bg-primary w-[30%] rounded-full"></div>
+</div>
+<button type="button" onclick="window.location.href='daftar_request_komoditas.html'" class="w-full bg-primary text-white py-2 rounded-lg font-bold text-sm flex items-center justify-center gap-2 shadow-md">
+<span class="material-symbols-outlined text-sm">handshake</span>
+                            Ambil Permintaan
+                        </button>
+</div>
+</div>
+<!-- Demand Card 2 -->
+<div class="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-2xl p-4 shadow-sm opacity-80">
+<div class="flex gap-4">
+<div class="size-16 rounded-xl overflow-hidden shrink-0">
+<img alt="Potatoes" data-alt="Heap of fresh potatoes" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDt7aj4ltmrdKtaQDPqffar2EGkWcaLRTDlcODYe60RlBGsjrxfA5kXx8AqRAMmHJlCiidv9QPjgqphHwdohxwlC4Spw1C71AnawX3e28Lv8CsFrvby7Hf4o2s2nmyR5OEJ79rJmrzGj9Lhgn6eWK-4X9TIXdFn6kxHY4JWNwYCNM5ps5pFMK_Su-5v-HbtymAagJ20pMCrXZTdW7_yaBQZDVNLEv0NvItG_36mA4GYKhei0ERsmObY7p6XOplheHS-ojLD3ghB_8I"/>
+</div>
+<div class="flex-1">
+<span class="bg-slate-100 text-slate-600 dark:bg-slate-700 dark:text-slate-400 text-[10px] font-bold px-2 py-0.5 rounded-full mb-1 inline-block">Reguler</span>
+<h3 class="font-bold text-slate-900 dark:text-white leading-tight">Butuh 1 Ton Kentang Granola</h3>
+<p class="text-xs text-slate-500 dark:text-slate-400 mt-1">Buyer: <span class="font-semibold text-slate-700 dark:text-slate-200">Resto Nusantara</span></p>
+</div>
+<button class="bg-slate-100 dark:bg-slate-700 size-10 rounded-full flex items-center justify-center text-slate-400">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+</div>
+</section>
+</main>
+<!-- Bottom Navigation Bar -->
+<nav class="fixed bottom-0 left-0 right-0 max-w-md mx-auto bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 px-6 py-2 flex justify-between items-center z-20">
+<a class="flex flex-col items-center gap-1 text-primary" href="dashboard.html">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">home</span>
+<span class="text-[10px] font-bold uppercase">Beranda</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-400 dark:text-slate-500" href="fulfillment_tracker.html">
+<span class="material-symbols-outlined">list_alt</span>
+<span class="text-[10px] font-bold uppercase">Pesanan</span>
+</a>
+<div class="relative -top-6">
+<button type="button" onclick="window.location.href='validasi_pengiriman.html'" class="bg-primary text-white size-14 rounded-full shadow-lg shadow-primary/40 flex items-center justify-center border-4 border-white dark:border-slate-900">
+<span class="material-symbols-outlined text-3xl">qr_code_scanner</span>
+</button>
+</div>
+<a class="flex flex-col items-center gap-1 text-slate-400 dark:text-slate-500" href="informasi_subsidi.html">
+<span class="material-symbols-outlined">eco</span>
+<span class="text-[10px] font-bold uppercase">Subsidi</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-400 dark:text-slate-500" href="profile_settings.html">
+<span class="material-symbols-outlined">person</span>
+<span class="text-[10px] font-bold uppercase">Profil</span>
+</a>
+</nav>
+</div>
+</body></html>

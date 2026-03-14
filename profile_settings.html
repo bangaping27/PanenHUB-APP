@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>PanenHub - Profile &amp; Settings</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#2d5927",
+                        "earth": "#4B3621",
+                        "background-light": "#f6f7f6",
+                        "background-dark": "#161d15",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100">
+<div class="relative flex min-h-screen w-full flex-col overflow-x-hidden max-w-md mx-auto bg-white dark:bg-background-dark shadow-xl">
+<!-- Header -->
+<div class="flex items-center p-4 sticky top-0 bg-white/80 dark:bg-background-dark/80 backdrop-blur-md z-10 border-b border-primary/10">
+<div onclick="window.location.href='dashboard.html'" class="text-primary flex size-10 shrink-0 items-center justify-center cursor-pointer">
+<span class="material-symbols-outlined">arrow_back</span>
+</div>
+<h2 class="text-slate-900 dark:text-slate-100 text-lg font-bold leading-tight flex-1 ml-2">Profile &amp; Settings</h2>
+<div class="flex w-10 items-center justify-end">
+<button class="text-primary">
+<span class="material-symbols-outlined">more_vert</span>
+</button>
+</div>
+</div>
+<!-- Profile Section -->
+<div class="flex p-6 flex-col items-center">
+<div class="relative">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full h-32 w-32 border-4 border-primary/20 shadow-lg" data-alt="Portrait of a smiling middle-aged male farmer" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAke5V8DO3QWOGjEJoHYR2yuT2isDhjlopKTMrGgKo6JORL5znkS5j-7egr2YnZP4j18egV7dLJjYD-NhydnFbtkTl6t4iHuqQWBu8UPCEfVIRpGnHaw74pMXamJGGvNpLXUEkLBmw0ORFVDJTWjTq63uL7P5J322jJl-LznyVVheWjbve2oA0XPj-w34dUO2xDvUKbv8X2A1wzq04VDS6DZWbN3k9chjHLWAXj7eMVY-ZUqhudebbLYhEAjLzqscxRR66YSFzH8gs");'>
+</div>
+<div class="absolute bottom-1 right-1 bg-primary text-white p-1.5 rounded-full border-2 border-white">
+<span class="material-symbols-outlined text-sm block">verified</span>
+</div>
+</div>
+<div class="mt-4 flex flex-col items-center text-center">
+<p class="text-slate-900 dark:text-slate-100 text-2xl font-bold">Apingbos</p>
+<div class="flex items-center gap-1 mt-1">
+<span class="material-symbols-outlined text-primary text-base">agriculture</span>
+<p class="text-primary font-semibold text-sm">Verified Farmer</p>
+</div>
+<p class="text-slate-500 dark:text-slate-400 text-xs mt-1">Member since October 2022</p>
+</div>
+<div class="flex w-full mt-6 gap-3">
+<button class="flex-1 h-10 bg-primary/10 text-primary rounded-lg font-bold text-sm flex items-center justify-center gap-2 hover:bg-primary/20 transition-colors">
+<span class="material-symbols-outlined text-lg">edit</span>
+                    Edit Profile
+                </button>
+<button class="flex-1 h-10 bg-primary text-white rounded-lg font-bold text-sm flex items-center justify-center gap-2 hover:bg-primary/90 transition-colors">
+<span class="material-symbols-outlined text-lg">share</span>
+                    Share
+                </button>
+</div>
+</div>
+<!-- Stats Grid -->
+<div class="flex gap-3 px-4 py-2">
+<div class="flex-1 flex flex-col gap-1 rounded-xl border border-primary/10 bg-primary/5 p-4 items-center text-center">
+<p class="text-slate-900 dark:text-slate-100 text-xl font-black">12</p>
+<p class="text-slate-500 dark:text-slate-400 text-[10px] uppercase tracking-wider font-bold">Harvests</p>
+</div>
+<div class="flex-1 flex flex-col gap-1 rounded-xl border border-primary/10 bg-primary/5 p-4 items-center text-center">
+<p class="text-slate-900 dark:text-slate-100 text-xl font-black">1.5k</p>
+<p class="text-slate-500 dark:text-slate-400 text-[10px] uppercase tracking-wider font-bold">Followers</p>
+</div>
+<div class="flex-1 flex flex-col gap-1 rounded-xl border border-primary/10 bg-primary/5 p-4 items-center text-center">
+<p class="text-slate-900 dark:text-slate-100 text-xl font-black">4.8</p>
+<p class="text-slate-500 dark:text-slate-400 text-[10px] uppercase tracking-wider font-bold">Rating</p>
+</div>
+</div>
+<!-- Verification Details Section -->
+<div class="px-4 py-6">
+<h3 class="text-slate-900 dark:text-slate-100 text-lg font-bold mb-4">Verification Details</h3>
+<div class="space-y-3">
+<div class="flex items-center justify-between p-3 bg-background-light dark:bg-primary/10 rounded-lg">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">id_card</span>
+<p class="text-sm font-medium">Farmer ID</p>
+</div>
+<p class="text-sm text-slate-500 font-mono">PH-7729-2022</p>
+</div>
+<div class="flex items-center justify-between p-3 bg-background-light dark:bg-primary/10 rounded-lg">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">location_on</span>
+<p class="text-sm font-medium">Farm Location</p>
+</div>
+<p class="text-sm text-slate-500">Lembang, West Java</p>
+</div>
+<div class="w-full h-32 rounded-lg bg-slate-200 mt-2 relative overflow-hidden">
+<div class="absolute inset-0 bg-cover bg-center" data-alt="Satellite map view of rural farmland area" data-location="Lembang" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCkuSN28KjAq5x85TMLhtmAibMnJBmiE2LYtDmK-rAgl61BIy4x5Ib9Axtj33oUK1Fu4MP3_YXZt5EmZxvWatHk9uF4BUIOWgOwcvIvez2o2vhO4EkfIb68uCgzosDuR0M8ymRVQjEk7-tbwdU5ODZaX7Qpb5_rAVXP7l44bPZpzok46BY_4nI7sdXCqnCVvGzGQcGkLudWoBmlCsKlB8-kLBJ-Wn1wl5RErAWyqYv7_Edhsf7HjsFbL6p0sTszl-Jv7nopdSbSIT0');"></div>
+<div class="absolute inset-0 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-4xl">location_on</span>
+</div>
+</div>
+</div>
+</div>
+<!-- App Settings -->
+<div class="px-4 pb-24">
+<h3 class="text-slate-900 dark:text-slate-100 text-lg font-bold mb-4">App Settings</h3>
+<div class="flex flex-col gap-1">
+<a class="flex items-center justify-between p-4 hover:bg-primary/5 rounded-xl group transition-colors" href="#">
+<div class="flex items-center gap-4">
+<div class="size-10 flex items-center justify-center bg-primary/10 rounded-lg group-hover:bg-primary/20">
+<span class="material-symbols-outlined text-primary">notifications</span>
+</div>
+<div>
+<p class="font-semibold text-slate-900 dark:text-slate-100">Notifications</p>
+<p class="text-xs text-slate-500">Alerts, sounds, and badges</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-slate-400">chevron_right</span>
+</a>
+<a class="flex items-center justify-between p-4 hover:bg-primary/5 rounded-xl group transition-colors" href="#">
+<div class="flex items-center gap-4">
+<div class="size-10 flex items-center justify-center bg-primary/10 rounded-lg group-hover:bg-primary/20">
+<span class="material-symbols-outlined text-primary">security</span>
+</div>
+<div>
+<p class="font-semibold text-slate-900 dark:text-slate-100">Privacy &amp; Security</p>
+<p class="text-xs text-slate-500">2FA, data usage, account visibility</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-slate-400">chevron_right</span>
+</a>
+<a class="flex items-center justify-between p-4 hover:bg-primary/5 rounded-xl group transition-colors text-red-600" href="login.html">
+<div class="flex items-center gap-4">
+<div class="size-10 flex items-center justify-center bg-red-50 rounded-lg group-hover:bg-red-100">
+<span class="material-symbols-outlined">logout</span>
+</div>
+<div>
+<p class="font-semibold">Log Out</p>
+<p class="text-xs text-red-400">Exit your session securely</p>
+</div>
+</div>
+</a>
+</div>
+</div>
+<!-- Bottom Navigation Bar -->
+<div class="fixed bottom-0 left-0 right-0 max-w-md mx-auto bg-white/95 dark:bg-background-dark/95 backdrop-blur-md border-t border-primary/10 px-6 pb-6 pt-3 flex items-center justify-between z-20">
+<a class="flex flex-col items-center gap-1 text-slate-400 hover:text-primary transition-colors" href="dashboard.html">
+<span class="material-symbols-outlined">home</span>
+<span class="text-[10px] font-bold uppercase tracking-tighter">Home</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-400 hover:text-primary transition-colors" href="marketplace_history.html">
+<span class="material-symbols-outlined">storefront</span>
+<span class="text-[10px] font-bold uppercase tracking-tighter">Market</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-400 hover:text-primary transition-colors" href="fulfillment_tracker.html">
+<span class="material-symbols-outlined">potted_plant</span>
+<span class="text-[10px] font-bold uppercase tracking-tighter">Harvest</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-400 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">groups</span>
+<span class="text-[10px] font-bold uppercase tracking-tighter">Community</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-primary transition-colors" href="profile_settings.html">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">person</span>
+<span class="text-[10px] font-bold uppercase tracking-tighter">Profile</span>
+</a>
+</div>
+</div>
+</body></html>

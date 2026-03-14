@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+
+<html lang="id"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#2d5927",
+                        "secondary-brown": "#4B3621",
+                        "background-light": "#f6f7f6",
+                        "background-dark": "#161d15",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 font-display">
+<div class="relative flex h-screen w-full flex-col overflow-x-hidden">
+<!-- Header -->
+<header class="flex items-center bg-white dark:bg-slate-900 p-4 border-b border-primary/10 sticky top-0 z-10">
+<div onclick="window.location.href='dashboard.html'" class="text-primary flex size-10 shrink-0 items-center justify-center cursor-pointer">
+<span class="material-symbols-outlined">arrow_back</span>
+</div>
+<h2 class="text-slate-900 dark:text-slate-100 text-lg font-bold leading-tight tracking-tight flex-1 ml-2">Permintaan Komoditas</h2>
+<div class="flex w-10 items-center justify-end">
+<button class="text-primary">
+<span class="material-symbols-outlined">search</span>
+</button>
+</div>
+</header>
+<!-- Tabs -->
+<div class="bg-white dark:bg-slate-900">
+<div class="flex border-b border-primary/10 px-4 gap-8">
+<a class="flex flex-col items-center justify-center border-b-[3px] border-primary text-primary pb-3 pt-4" href="#">
+<p class="text-sm font-bold tracking-wide">Aktif</p>
+</a>
+<a class="flex flex-col items-center justify-center border-b-[3px] border-transparent text-slate-400 pb-3 pt-4" href="#">
+<p class="text-sm font-bold tracking-wide">Selesai</p>
+</a>
+<a class="flex flex-col items-center justify-center border-b-[3px] border-transparent text-slate-400 pb-3 pt-4" href="#">
+<p class="text-sm font-bold tracking-wide">Dibatalkan</p>
+</a>
+</div>
+</div>
+<!-- Content Area -->
+<main class="flex-1 overflow-y-auto p-4 space-y-4">
+<!-- Card 1 -->
+<div class="flex flex-col overflow-hidden rounded-xl bg-white dark:bg-slate-900 shadow-sm border border-primary/5">
+<div class="w-full bg-center bg-no-repeat aspect-[16/9] bg-cover" data-alt="Fresh red chili peppers harvested in a crate" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDbNlIMqOnoInnMoFXA5AZk7JYLrjhiuIjpolgZa7zmBTwvRCX2Y4X9OxcBKMV0-K4lXMz6x_7YOSxlBzDPjnmJPpt0wdbvaHrxP0tIHa2g1lfByIV_WvNyHfLHRoxGMuD3InzngJ6ROJo8r9SF9S7uEqq08T448bgxCf1iQzPWaQOpjSKqKRt7hvanTquPu5pILijGYZmDddfz5L3I2p7rLJap-SfoZ71DXwhBZk3pwdk8XXMzCqWir_U9zxkPvcir6ClNVUOanzU');">
+</div>
+<div class="flex flex-col p-4 gap-2">
+<div class="flex justify-between items-start">
+<span class="bg-red-100 text-red-700 text-[10px] font-bold px-2 py-0.5 rounded-full uppercase tracking-wider">Mendesak</span>
+<span class="text-primary font-bold text-sm">Rp 35.000/kg</span>
+</div>
+<h3 class="text-slate-900 dark:text-slate-100 text-lg font-bold leading-tight">Butuh 500kg Cabai Merah</h3>
+<div class="space-y-1">
+<div class="flex items-center gap-2 text-secondary-brown dark:text-slate-300">
+<span class="material-symbols-outlined text-sm">business</span>
+<p class="text-sm font-medium">Buyer: PT Sayur Segar</p>
+</div>
+<div class="flex items-center gap-2 text-secondary-brown dark:text-slate-400">
+<span class="material-symbols-outlined text-sm">location_on</span>
+<p class="text-sm">Jakarta Timur, DKI Jakarta</p>
+</div>
+</div>
+<button type="button" onclick="window.location.href='ambil_request_komoditas.html'" class="mt-2 w-full flex items-center justify-center rounded-lg bg-primary py-3 text-white text-sm font-bold shadow-sm active:scale-95 transition-transform">
+                        Kirim Penawaran
+                    </button>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="flex flex-col overflow-hidden rounded-xl bg-white dark:bg-slate-900 shadow-sm border border-primary/5">
+<div class="w-full bg-center bg-no-repeat aspect-[16/9] bg-cover" data-alt="Dry yellow corn kernels in a storage warehouse" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCTgvR3DEuj2DiS1O94AM9bpjrziKoL5Wy2y0VL9CUO--tv65aAmYKoNtSv10_9CAV7J-2FJ4et-c_xyCHu6XM5tL1WFkXwZlgkJfX7R0R5qa6Y_IBjyMlvPPFwJRAnzIwZeVHTv7kUB3HgsyRG-IibF04s5WQj3j6TP9v6HgCnYHuzkjS_I60bN_ptfo8tGR68UEQL8rzOdlZ0qbgrFlrlLaLGh2_Eyw81dEb65Y77Nyzvwk7nbl0YwaB1kr9R6I_gY6QkdssjZVo');">
+</div>
+<div class="flex flex-col p-4 gap-2">
+<div class="flex justify-between items-start">
+<span class="bg-primary/10 text-primary text-[10px] font-bold px-2 py-0.5 rounded-full uppercase tracking-wider">Terbuka</span>
+<span class="text-primary font-bold text-sm">Rp 5.200/kg</span>
+</div>
+<h3 class="text-slate-900 dark:text-slate-100 text-lg font-bold leading-tight">Butuh 1 Ton Jagung Pipil</h3>
+<div class="space-y-1">
+<div class="flex items-center gap-2 text-secondary-brown dark:text-slate-300">
+<span class="material-symbols-outlined text-sm">business</span>
+<p class="text-sm font-medium">Buyer: CV Tani Maju</p>
+</div>
+<div class="flex items-center gap-2 text-secondary-brown dark:text-slate-400">
+<span class="material-symbols-outlined text-sm">location_on</span>
+<p class="text-sm">Lampung Selatan, Lampung</p>
+</div>
+</div>
+<button type="button" onclick="window.location.href='ambil_request_komoditas.html'" class="mt-2 w-full flex items-center justify-center rounded-lg bg-primary py-3 text-white text-sm font-bold shadow-sm active:scale-95 transition-transform">
+                        Kirim Penawaran
+                    </button>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="flex flex-col overflow-hidden rounded-xl bg-white dark:bg-slate-900 shadow-sm border border-primary/5">
+<div class="w-full bg-center bg-no-repeat aspect-[16/9] bg-cover" data-alt="Pile of organic potatoes on a wooden table" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAGRuHF-7wwrKLXikzlXAJItuISR5wD9SK2LnvLyalz9tFvO7s41PrayNBoiBpusIpFLlZAuBlLjaIHON_7bLodf5Vq5I7uCXb-fpsm2cMZyxNVLyqYLxUbSejkOySRX0C7P5C7bpajjRH6SDBzhv0aLsk-gZ2t8eO5V9z0b5VYZtebgMWpnNZGKkZYScAhUeecEbDIX-LOOUDXD1sthlvWQMOrbIiESAm9u8KE11nHABFSHJzS73VWNGggWPoOGssZswwVCSsFM4w');">
+</div>
+<div class="flex flex-col p-4 gap-2">
+<div class="flex justify-between items-start">
+<span class="bg-primary/10 text-primary text-[10px] font-bold px-2 py-0.5 rounded-full uppercase tracking-wider">Terbuka</span>
+<span class="text-primary font-bold text-sm">Rp 12.000/kg</span>
+</div>
+<h3 class="text-slate-900 dark:text-slate-100 text-lg font-bold leading-tight">Butuh 300kg Kentang Dieng</h3>
+<div class="space-y-1">
+<div class="flex items-center gap-2 text-secondary-brown dark:text-slate-300">
+<span class="material-symbols-outlined text-sm">business</span>
+<p class="text-sm font-medium">Buyer: Resto Alam</p>
+</div>
+<div class="flex items-center gap-2 text-secondary-brown dark:text-slate-400">
+<span class="material-symbols-outlined text-sm">location_on</span>
+<p class="text-sm">Bandung, Jawa Barat</p>
+</div>
+</div>
+<button type="button" onclick="window.location.href='ambil_request_komoditas.html'" class="mt-2 w-full flex items-center justify-center rounded-lg bg-primary py-3 text-white text-sm font-bold shadow-sm active:scale-95 transition-transform">
+                        Kirim Penawaran
+                    </button>
+</div>
+</div>
+<div class="h-20"></div>
+</main>
+<!-- Bottom Navigation Bar -->
+<nav class="fixed bottom-0 w-full flex border-t border-primary/10 bg-white dark:bg-slate-900 px-4 pb-4 pt-2 shadow-[0_-2px_10px_rgba(0,0,0,0.05)]">
+<a class="flex flex-1 flex-col items-center justify-center gap-1 text-slate-400" href="dashboard.html">
+<span class="material-symbols-outlined">home</span>
+<p class="text-[10px] font-medium leading-normal tracking-wide">Beranda</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-center gap-1 text-primary" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">handshake</span>
+<p class="text-[10px] font-bold leading-normal tracking-wide">Permintaan</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-center gap-1 text-slate-400" href="marketplace_history.html">
+<span class="material-symbols-outlined">receipt_long</span>
+<p class="text-[10px] font-medium leading-normal tracking-wide">Transaksi</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-center gap-1 text-slate-400" href="profile_settings.html">
+<span class="material-symbols-outlined">person</span>
+<p class="text-[10px] font-medium leading-normal tracking-wide">Profil</p>
+</a>
+</nav>
+</div>
+</body></html>

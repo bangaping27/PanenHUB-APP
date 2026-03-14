@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>PanenHub Fulfillment Tracker</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#2d5927",
+                        "earth": "#4B3621",
+                        "background-light": "#f6f7f6",
+                        "background-dark": "#161d15",
+                    },
+                    fontFamily: {
+                        "display": ["Inter"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .filled-icon {
+            font-variation-settings: 'FILL' 1;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100">
+<div class="relative flex h-auto min-h-screen w-full max-w-md mx-auto flex-col bg-background-light dark:bg-background-dark overflow-x-hidden border-x border-primary/10 shadow-xl">
+<!-- Header -->
+<div class="flex items-center bg-background-light dark:bg-background-dark p-4 pb-2 justify-between sticky top-0 z-10 border-b border-primary/10">
+<div onclick="window.location.href='dashboard.html'" class="text-primary flex size-10 shrink-0 items-center justify-center rounded-full hover:bg-primary/10 cursor-pointer">
+<span class="material-symbols-outlined">arrow_back</span>
+</div>
+<h2 class="text-slate-900 dark:text-slate-100 text-lg font-bold leading-tight tracking-tight flex-1 text-center">Fulfillment Tracker</h2>
+<div class="flex w-10 items-center justify-end">
+<button class="flex size-10 cursor-pointer items-center justify-center rounded-full hover:bg-primary/10 text-slate-900 dark:text-slate-100">
+<span class="material-symbols-outlined">more_vert</span>
+</button>
+</div>
+</div>
+<div class="flex flex-col flex-1">
+<!-- Hero Banner / Active Task Header -->
+<div class="px-4 pt-6 pb-2">
+<h1 class="text-slate-900 dark:text-slate-100 text-2xl font-bold leading-tight tracking-tight">Active Fulfillment</h1>
+<p class="text-slate-500 dark:text-slate-400 text-sm">Managing your premium farm produce</p>
+</div>
+<!-- Card 9: Main Fulfillment Card -->
+<div class="p-4">
+<div class="flex flex-col overflow-hidden rounded-xl shadow-sm border border-primary/10 bg-white dark:bg-slate-900/50">
+<div class="w-full bg-center bg-no-repeat aspect-[16/9] bg-cover" data-alt="Lush green organic rice field at sunrise" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDQs57LUBMlyPmAN6wMporKEsjLcO3xGRGGyAoo7N635VB30wuqBVKaGJF309sf1Y7ZnaDXnIpq73WlppxgNOdAqFnKDykDW2XOhsp1GR5JWTrke40J3sEdPlvCp_iqyGcE6SPECRgzBbA5Jmi3NeLN6BASQ-urATNphNOF4WL5hmVddBGfo5_91bBXt7d0fvFQCGWLtig-UyQt94zyGLcGmac3EVOxdkqvLTsAyjOw90OS45bT6xFvogxBZuxSSlxucGEZDTqaBjs");'>
+</div>
+<div class="flex w-full flex-col p-5 gap-4">
+<div class="flex justify-between items-start">
+<div>
+<span class="inline-block px-2 py-1 rounded-md bg-primary/10 text-primary text-[10px] font-bold uppercase tracking-wider mb-2">In Progress</span>
+<h3 class="text-slate-900 dark:text-slate-100 text-xl font-bold leading-tight">Premium Organic Rice</h3>
+<p class="text-earth dark:text-primary/70 text-sm font-medium">Batch ID: #PH-8821-JVA</p>
+</div>
+<div class="flex flex-col items-end">
+<p class="text-slate-400 text-[10px] uppercase font-bold">Estimated Yield</p>
+<p class="text-primary font-bold">4.2 Tons</p>
+</div>
+</div>
+<!-- Progress Tracker -->
+<div class="mt-4 space-y-0">
+<!-- Step 1: Penanaman (Completed) -->
+<div class="grid grid-cols-[40px_1fr] gap-x-3">
+<div class="flex flex-col items-center">
+<div class="flex size-8 items-center justify-center rounded-full bg-primary text-white">
+<span class="material-symbols-outlined text-sm filled-icon">check</span>
+</div>
+<div class="w-0.5 bg-primary h-10"></div>
+</div>
+<div class="flex flex-col pb-6">
+<p class="text-slate-900 dark:text-slate-100 text-base font-semibold">Penanaman</p>
+<p class="text-slate-500 dark:text-slate-400 text-xs">Completed on Jan 15, 2024</p>
+</div>
+</div>
+<!-- Step 2: Perawatan (Completed) -->
+<div class="grid grid-cols-[40px_1fr] gap-x-3">
+<div class="flex flex-col items-center">
+<div class="flex size-8 items-center justify-center rounded-full bg-primary text-white">
+<span class="material-symbols-outlined text-sm filled-icon">check</span>
+</div>
+<div class="w-0.5 bg-primary h-10"></div>
+</div>
+<div class="flex flex-col pb-6">
+<p class="text-slate-900 dark:text-slate-100 text-base font-semibold">Perawatan</p>
+<p class="text-slate-500 dark:text-slate-400 text-xs">Completed on Feb 20, 2024</p>
+</div>
+</div>
+<!-- Step 3: Siap Panen (Active) -->
+<div class="grid grid-cols-[40px_1fr] gap-x-3">
+<div class="flex flex-col items-center">
+<div class="flex size-8 items-center justify-center rounded-full border-2 border-primary bg-primary/10 text-primary">
+<span class="material-symbols-outlined text-sm animate-pulse">timer</span>
+</div>
+<div class="w-0.5 bg-slate-200 dark:bg-slate-700 h-10 grow"></div>
+</div>
+<div class="flex flex-col pb-6">
+<div class="flex items-center gap-2">
+<p class="text-primary text-base font-bold">Siap Panen</p>
+<span class="px-2 py-0.5 rounded-full bg-primary text-white text-[10px] font-bold">ACTIVE</span>
+</div>
+<p class="text-slate-500 dark:text-slate-400 text-xs">Current stage - 92% Ready</p>
+<div class="mt-2 h-1.5 w-full bg-slate-100 dark:bg-slate-800 rounded-full overflow-hidden">
+<div class="h-full bg-primary rounded-full w-[92%]"></div>
+</div>
+</div>
+</div>
+<!-- Step 4: Distribusi (Future) -->
+<div class="grid grid-cols-[40px_1fr] gap-x-3">
+<div class="flex flex-col items-center">
+<div class="flex size-8 items-center justify-center rounded-full border-2 border-slate-200 dark:border-slate-700 text-slate-300 dark:text-slate-600">
+<span class="material-symbols-outlined text-sm">local_shipping</span>
+</div>
+</div>
+<div class="flex flex-col">
+<p class="text-slate-400 dark:text-slate-500 text-base font-medium">Distribusi</p>
+<p class="text-slate-400 dark:text-slate-600 text-xs">Scheduled for Mar 30, 2024</p>
+</div>
+</div>
+</div>
+<div class="pt-4 border-t border-slate-100 dark:border-slate-800 flex gap-3">
+<button class="flex-1 cursor-pointer items-center justify-center rounded-lg h-12 bg-primary text-white text-sm font-bold shadow-md shadow-primary/20 hover:bg-primary/90 transition-colors">
+                                Update Progress
+                            </button>
+<button class="flex size-12 cursor-pointer items-center justify-center rounded-lg border border-primary/20 bg-primary/5 text-primary hover:bg-primary/10 transition-colors">
+<span class="material-symbols-outlined">analytics</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Details Section -->
+<div class="px-4 pb-10">
+<div class="bg-earth/5 dark:bg-primary/10 rounded-xl p-4 border border-earth/10 dark:border-primary/20">
+<h4 class="text-earth dark:text-primary font-bold text-sm mb-3 flex items-center gap-2">
+<span class="material-symbols-outlined text-base">info</span>
+                        Fulfillment Insights
+                    </h4>
+<div class="grid grid-cols-2 gap-4">
+<div class="space-y-1">
+<p class="text-slate-500 text-[10px] uppercase font-bold tracking-tighter">Soil Health</p>
+<p class="text-slate-900 dark:text-slate-100 font-semibold text-sm">Excellent (9.4/10)</p>
+</div>
+<div class="space-y-1">
+<p class="text-slate-500 text-[10px] uppercase font-bold tracking-tighter">Water Level</p>
+<p class="text-slate-900 dark:text-slate-100 font-semibold text-sm">Optimal</p>
+</div>
+<div class="space-y-1">
+<p class="text-slate-500 text-[10px] uppercase font-bold tracking-tighter">Pest Risk</p>
+<p class="text-green-600 font-semibold text-sm">Low</p>
+</div>
+<div class="space-y-1">
+<p class="text-slate-500 text-[10px] uppercase font-bold tracking-tighter">Storage Unit</p>
+<p class="text-slate-900 dark:text-slate-100 font-semibold text-sm">Silo #04-B</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Bottom Navigation Bar -->
+<div class="mt-auto flex gap-2 border-t border-slate-200 dark:border-slate-800 bg-white/80 dark:bg-background-dark/80 backdrop-blur-md px-4 pb-6 pt-3 sticky bottom-0">
+<a class="flex flex-1 flex-col items-center justify-center gap-1 text-slate-400 dark:text-slate-500 transition-colors hover:text-primary" href="dashboard.html">
+<span class="material-symbols-outlined">home</span>
+<p class="text-[10px] font-medium leading-normal tracking-tight">Home</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-center gap-1 text-primary transition-colors" href="fulfillment_tracker.html">
+<span class="material-symbols-outlined filled-icon">assignment_turned_in</span>
+<p class="text-[10px] font-bold leading-normal tracking-tight">Tracking</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-center gap-1 text-slate-400 dark:text-slate-500 transition-colors hover:text-primary" href="#">
+<span class="material-symbols-outlined">inventory_2</span>
+<p class="text-[10px] font-medium leading-normal tracking-tight">Inventory</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-center gap-1 text-slate-400 dark:text-slate-500 transition-colors hover:text-primary" href="profile_settings.html">
+<span class="material-symbols-outlined">person</span>
+<p class="text-[10px] font-medium leading-normal tracking-tight">Profile</p>
+</a>
+</div>
+</div>
+</body></html>

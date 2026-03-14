@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+
+<html lang="id"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#2d5927",
+                        "earth-brown": "#4b3621",
+                        "background-light": "#f6f7f6",
+                        "background-dark": "#161d15",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Inter', sans-serif;
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark min-h-screen flex items-center justify-center p-4">
+<div class="max-w-md w-full bg-white dark:bg-zinc-900 rounded-xl shadow-xl overflow-hidden border border-primary/10">
+<!-- TopAppBar Header -->
+<div class="flex items-center p-4 border-b border-zinc-100 dark:border-zinc-800">
+<div onclick="window.location.href='login.html'" class="text-primary cursor-pointer hover:bg-primary/10 p-2 rounded-full transition-colors">
+<span class="material-symbols-outlined">arrow_back</span>
+</div>
+<h2 class="text-slate-900 dark:text-slate-100 text-lg font-bold leading-tight tracking-tight flex-1 ml-2">Daftar Akun Baru</h2>
+</div>
+<div class="p-6">
+<!-- Hero Image/Graphic -->
+<div class="w-full bg-center bg-no-repeat bg-cover flex flex-col justify-end overflow-hidden rounded-lg min-h-[160px] mb-6 relative group" data-alt="Lush green farm field landscape at sunrise" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBGri0pfCG1SaxiRtEDjNjqcTScv7RFbQuuwlBtCqAYGvs5qZQMj-nyC_xHZx4rI3dwqEVxDctMEnbnyVqCI-FKZ-KRmUW4kaSX7eb5ysUoqq2xtjfQsDLijgoHqDHbBAjCmJTcv-wwKgAT3jP4vsOkVLLDuPBlaSMXsQQuMdNQf9tg1PaHuWjNY3JteHaIkzgGSSNeXobdC_TMIDxj2k0TTBHhiaPlsXc0pHXcdcO_OHhRRz6KH3lHyrgfoNT9R_R-8AkY-LjZ7OA");'>
+<div class="absolute inset-0 bg-gradient-to-t from-earth-brown/80 to-transparent"></div>
+<div class="relative p-4">
+<h3 class="text-white text-xl font-bold">Gabung PanenHub</h3>
+<p class="text-white/90 text-sm">Mulai kelola hasil panen Anda dengan lebih mudah</p>
+</div>
+</div>
+<!-- Form Section -->
+<form class="space-y-4">
+<!-- Full Name -->
+<div class="flex flex-col gap-1.5">
+<label class="text-slate-700 dark:text-slate-300 text-sm font-semibold">Nama Lengkap</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-primary/60 text-xl">person</span>
+<input class="w-full pl-10 pr-4 py-3 rounded-lg border border-zinc-200 dark:border-zinc-700 bg-zinc-50 dark:bg-zinc-800 text-slate-900 dark:text-slate-100 focus:ring-2 focus:ring-primary focus:border-transparent transition-all outline-none" placeholder="Masukkan nama lengkap Anda" type="text"/>
+</div>
+</div>
+<!-- Phone Number -->
+<div class="flex flex-col gap-1.5">
+<label class="text-slate-700 dark:text-slate-300 text-sm font-semibold">Nomor Telepon</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-primary/60 text-xl">call</span>
+<input class="w-full pl-10 pr-4 py-3 rounded-lg border border-zinc-200 dark:border-zinc-700 bg-zinc-50 dark:bg-zinc-800 text-slate-900 dark:text-slate-100 focus:ring-2 focus:ring-primary focus:border-transparent transition-all outline-none" placeholder="0812xxxxxxx" type="tel"/>
+</div>
+</div>
+<!-- Password -->
+<div class="flex flex-col gap-1.5">
+<label class="text-slate-700 dark:text-slate-300 text-sm font-semibold">Kata Sandi</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-primary/60 text-xl">lock</span>
+<input class="w-full pl-10 pr-12 py-3 rounded-lg border border-zinc-200 dark:border-zinc-700 bg-zinc-50 dark:bg-zinc-800 text-slate-900 dark:text-slate-100 focus:ring-2 focus:ring-primary focus:border-transparent transition-all outline-none" placeholder="Minimal 8 karakter" type="password"/>
+<span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 text-zinc-400 cursor-pointer hover:text-primary">visibility</span>
+</div>
+</div>
+<!-- Terms and Conditions -->
+<div class="flex items-start gap-3 py-2">
+<input class="mt-1 w-4 h-4 text-primary border-zinc-300 rounded focus:ring-primary transition-colors cursor-pointer" id="terms" type="checkbox"/>
+<label class="text-sm text-slate-600 dark:text-slate-400 leading-snug" for="terms">
+                    Saya menyetujui <span class="text-primary font-semibold underline">Syarat &amp; Ketentuan</span> serta <span class="text-primary font-semibold underline">Kebijakan Privasi</span> PanenHub.
+                </label>
+</div>
+<!-- Submit Button -->
+<button class="w-full bg-primary hover:bg-primary/90 text-white font-bold py-4 rounded-xl shadow-lg shadow-primary/20 transition-all active:scale-[0.98] mt-4" type="button" onclick="window.location.href='verifikasi_otp.html'">
+                Daftar Sekarang
+            </button>
+</form>
+<!-- Login Link -->
+<div class="mt-8 text-center">
+<p class="text-slate-600 dark:text-slate-400 text-sm">
+                Sudah punya akun? 
+                <a class="text-earth-brown dark:text-primary font-bold hover:underline" href="login.html">Masuk</a>
+</p>
+</div>
+</div>
+<!-- Bottom Footer Accent -->
+<div class="h-2 bg-gradient-to-r from-primary via-earth-brown to-primary"></div>
+</div>
+</body></html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+
+<html class="light" lang="id"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#2d5927", // Forest Green
+                        "secondary": "#4b3621", // Earth Brown
+                        "background-light": "#f6f7f6",
+                        "background-dark": "#161d15",
+                    },
+                    fontFamily: {
+                        "display": ["Inter"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .otp-input:focus {
+            border-bottom-color: #2d5927 !important;
+            outline: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 min-h-screen">
+<div class="relative flex h-auto min-h-screen w-full max-w-[480px] mx-auto flex-col bg-background-light dark:bg-background-dark overflow-x-hidden">
+<!-- Top App Bar -->
+<div class="flex items-center p-4 pb-2 justify-between">
+<button aria-label="Go back" type="button" onclick="history.back()" class="text-secondary dark:text-primary flex size-12 shrink-0 items-center justify-start focus:outline-none">
+<span class="material-symbols-outlined">arrow_back</span>
+</button>
+<h2 class="text-secondary dark:text-slate-100 text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center pr-12">PanenHub</h2>
+</div>
+<!-- Illustration Section -->
+<div class="flex justify-center py-8">
+<div class="w-24 h-24 bg-primary/10 rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-5xl">phonelink_lock</span>
+</div>
+</div>
+<!-- Header Content -->
+<div class="px-6 text-center">
+<h3 class="text-secondary dark:text-slate-100 tracking-light text-2xl font-bold leading-tight pb-2">Verifikasi Akun</h3>
+<p class="text-slate-600 dark:text-slate-400 text-base font-normal leading-normal">
+                Kode verifikasi 4 digit telah dikirimkan ke nomor ponsel Anda. Silakan masukkan kode tersebut di bawah ini.
+            </p>
+</div>
+<!-- OTP Input Fields -->
+<div class="flex justify-center px-4 py-10">
+<fieldset class="relative flex gap-6">
+<input autocomplete="one-time-code" class="otp-input flex h-14 w-12 text-center bg-transparent border-0 border-b-2 border-slate-300 dark:border-slate-700 text-2xl font-bold leading-normal text-secondary dark:text-slate-100" inputmode="numeric" max="9" maxlength="1" type="text" value=""/>
+<input class="otp-input flex h-14 w-12 text-center bg-transparent border-0 border-b-2 border-slate-300 dark:border-slate-700 text-2xl font-bold leading-normal text-secondary dark:text-slate-100" inputmode="numeric" max="9" maxlength="1" type="text" value=""/>
+<input class="otp-input flex h-14 w-12 text-center bg-transparent border-0 border-b-2 border-slate-300 dark:border-slate-700 text-2xl font-bold leading-normal text-secondary dark:text-slate-100" inputmode="numeric" max="9" maxlength="1" type="text" value=""/>
+<input class="otp-input flex h-14 w-12 text-center bg-transparent border-0 border-b-2 border-slate-300 dark:border-slate-700 text-2xl font-bold leading-normal text-secondary dark:text-slate-100" inputmode="numeric" max="9" maxlength="1" type="text" value=""/>
+</fieldset>
+</div>
+<!-- Submit Button -->
+<div class="flex px-6 py-3 mt-4">
+<button type="button" onclick="window.location.href='atur_ulang_password.html'" class="flex min-w-[84px] w-full cursor-pointer items-center justify-center overflow-hidden rounded-xl h-14 px-5 flex-1 bg-primary text-white text-base font-bold leading-normal tracking-[0.015em] hover:bg-primary/90 transition-colors shadow-lg shadow-primary/20">
+<span class="truncate">Verifikasi</span>
+</button>
+</div>
+<!-- Resend Section -->
+<div class="flex flex-col items-center justify-center gap-2 pt-6 pb-10">
+<p class="text-slate-500 dark:text-slate-400 text-sm">Tidak menerima kode?</p>
+<button class="text-primary font-semibold text-base hover:underline underline-offset-4">
+                Kirim Ulang Kode
+            </button>
+</div>
+<!-- Footer Decoration -->
+<div class="mt-auto opacity-20">
+<div class="h-32 w-full bg-gradient-to-t from-primary/30 to-transparent"></div>
+</div>
+</div>
+</body></html>

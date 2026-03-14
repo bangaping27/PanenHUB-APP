@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+
+<html lang="id"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>PanenHub - Subsidi &amp; Kuota</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#2d5927",
+                        "earth-brown": "#5d4037",
+                        "background-light": "#f6f7f6",
+                        "background-dark": "#161d15",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .fill-icon {
+            font-variation-settings: 'FILL' 1;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 min-h-screen flex flex-col">
+<header class="sticky top-0 z-10 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-primary/10">
+<div class="flex items-center p-4">
+<button type="button" onclick="window.location.href='dashboard.html'" class="flex items-center justify-center size-10 rounded-full hover:bg-primary/10 transition-colors">
+<span class="material-symbols-outlined">arrow_back</span>
+</button>
+<h1 class="text-lg font-bold flex-1 text-center pr-10">Subsidi &amp; Kuota</h1>
+</div>
+</header>
+<main class="flex-1 overflow-y-auto px-4 py-6 space-y-6">
+<section class="relative overflow-hidden rounded-xl bg-primary p-6 text-white shadow-lg">
+<div class="absolute top-0 right-0 -mr-8 -mt-8 size-32 bg-white/10 rounded-full blur-2xl"></div>
+<div class="relative z-10">
+<div class="flex justify-between items-start mb-6">
+<div>
+<p class="text-white/80 text-sm font-medium">Sisa Kuota Pupuk Urea</p>
+<h2 class="text-3xl font-bold mt-1">175 <span class="text-lg font-normal">kg</span></h2>
+</div>
+<div class="bg-white/20 p-2 rounded-lg">
+<span class="material-symbols-outlined text-white">wallet</span>
+</div>
+</div>
+<div class="space-y-2">
+<div class="flex justify-between text-xs font-medium">
+<span>Musim Tanam 2024</span>
+<span>65% Terpakai</span>
+</div>
+<div class="w-full h-2 bg-white/20 rounded-full overflow-hidden">
+<div class="bg-white h-full rounded-full" style="width: 65%;"></div>
+</div>
+<p class="text-xs text-white/70 italic text-right">Batas waktu: 30 Nov 2024</p>
+</div>
+</div>
+</section>
+<section class="space-y-4">
+<div class="flex items-center justify-between">
+<h3 class="font-bold text-lg">Detail Subsidi</h3>
+<button class="text-primary text-sm font-semibold">Lihat Riwayat</button>
+</div>
+<div class="grid grid-cols-1 gap-4">
+<div class="bg-white dark:bg-slate-800 p-4 rounded-xl border border-primary/10 flex items-center gap-4">
+<div class="size-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">inventory_2</span>
+</div>
+<div class="flex-1">
+<p class="text-sm font-bold">Total Kuota</p>
+<p class="text-xs text-slate-500">Alokasi Tahunan</p>
+</div>
+<p class="font-bold">500 kg</p>
+</div>
+<div class="bg-white dark:bg-slate-800 p-4 rounded-xl border border-primary/10 flex items-center gap-4">
+<div class="size-12 rounded-lg bg-earth-brown/10 flex items-center justify-center text-earth-brown">
+<span class="material-symbols-outlined">local_shipping</span>
+</div>
+<div class="flex-1">
+<p class="text-sm font-bold">Terambil</p>
+<p class="text-xs text-slate-500">Hingga hari ini</p>
+</div>
+<p class="font-bold text-earth-brown">325 kg</p>
+</div>
+</div>
+</section>
+<section class="space-y-4">
+<h3 class="font-bold text-lg">Jadwal Pengambilan</h3>
+<div class="bg-white dark:bg-slate-800 rounded-xl border border-primary/10 divide-y divide-primary/5">
+<div class="p-4 flex gap-4">
+<div class="flex flex-col items-center justify-center bg-primary/5 rounded-lg px-3 py-1 min-w-[60px]">
+<span class="text-xs font-medium text-primary uppercase">Okt</span>
+<span class="text-xl font-bold text-primary">24</span>
+</div>
+<div class="flex-1">
+<p class="text-sm font-bold">KUD Tani Makmur</p>
+<div class="flex items-center gap-1 text-xs text-slate-500 mt-1">
+<span class="material-symbols-outlined text-[14px]">schedule</span>
+<span>08:00 - 14:00</span>
+</div>
+</div>
+<button class="self-center bg-primary text-white text-xs px-3 py-1.5 rounded-lg font-medium">Daftar</button>
+</div>
+<div class="p-4 flex gap-4 opacity-60">
+<div class="flex flex-col items-center justify-center bg-slate-100 rounded-lg px-3 py-1 min-w-[60px]">
+<span class="text-xs font-medium text-slate-500 uppercase">Nov</span>
+<span class="text-xl font-bold text-slate-500">12</span>
+</div>
+<div class="flex-1">
+<p class="text-sm font-bold">Kios Pupuk Sejahtera</p>
+<div class="flex items-center gap-1 text-xs text-slate-500 mt-1">
+<span class="material-symbols-outlined text-[14px]">schedule</span>
+<span>09:00 - 15:00</span>
+</div>
+</div>
+<span class="self-center text-xs font-medium px-3 py-1.5 bg-slate-100 rounded-lg">Penuh</span>
+</div>
+</div>
+</section>
+<div class="rounded-xl bg-earth-brown/5 p-4 border border-earth-brown/10 flex gap-3">
+<span class="material-symbols-outlined text-earth-brown">info</span>
+<p class="text-xs text-earth-brown leading-relaxed">
+                Pastikan membawa Kartu Tani asli dan KTP saat melakukan pengambilan di lokasi yang telah ditentukan.
+            </p>
+</div>
+</main>
+<nav class="sticky bottom-0 bg-white dark:bg-slate-900 border-t border-primary/10 px-4 py-2">
+<div class="flex justify-around items-center">
+<a class="flex flex-col items-center gap-1 p-2 text-slate-400" href="dashboard.html">
+<span class="material-symbols-outlined">home</span>
+<span class="text-[10px] font-medium">Beranda</span>
+</a>
+<a class="flex flex-col items-center gap-1 p-2 text-primary" href="#">
+<span class="material-symbols-outlined fill-icon">receipt_long</span>
+<span class="text-[10px] font-bold">Subsidi</span>
+</a>
+<a class="flex flex-col items-center gap-1 p-2 text-slate-400" href="marketplace_history.html">
+<span class="material-symbols-outlined">storefront</span>
+<span class="text-[10px] font-medium">Pasar</span>
+</a>
+<a class="flex flex-col items-center gap-1 p-2 text-slate-400" href="profile_settings.html">
+<span class="material-symbols-outlined">person</span>
+<span class="text-[10px] font-medium">Profil</span>
+</a>
+</div>
+</nav>
+</body></html>
