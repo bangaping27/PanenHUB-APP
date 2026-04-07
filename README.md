@@ -10,10 +10,10 @@ PanenHUB is an application concept aimed at connecting farmers and helping them 
 ### The Team (SATU Tani)
 
 This prototype was brought to life by the SATU Tani team:
-- **WILLIAM JOHAN PAKPAKHAN**
-- **RAFLI ANGGORO**
-- **RENALDO YOSIA SETIYANTO**
-- **Sudarmo Adi Joyo Putro**
+William Johan Pakpahan – Project Lead / Product Planner
+Rafli Anggoro – System Architect / Technical Planner
+Sudarmo Adi Joyo Putro – UI Designer
+Renaldo Yosia Setiyanto – UX Designer / Prototype Builder
 
 ## How to View
 To interact with the prototype, you do not need any local server setup. Simply open the `login.html` file in your preferred web browser to begin the application flow. 
